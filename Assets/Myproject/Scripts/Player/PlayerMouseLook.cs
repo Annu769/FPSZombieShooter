@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerMouseLook : MonoBehaviour
 {
     [SerializeField] private float sensitivity = 200f;
+
     [SerializeField] private Transform player;
+
+
     private float mouseX;
     private float mouseY;
     private float rotation;
     private float minAngle = -90f;
     private float maxAngle = 90f;
-   
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

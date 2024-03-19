@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FPSZombie.SingleTon;
+using FPSZombie.ScriptableObjects;
 namespace FPSZombie.Player
 {
-    public class PlayerService 
+    public class PlayerService :GenericMonoSingleTon<PlayerService>
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField] private PlayerSO playerSO;
+        private PlayerController playerController;
 
+        private void Start()
+        {
+            CreatePlayer();
         }
 
-        // Update is called once per frame
-        void Update()
+        public PlayerController CreatePlayer()
         {
-
+            playerController = new PlayerController(playerSO);
+            return playerController;
         }
     }
 

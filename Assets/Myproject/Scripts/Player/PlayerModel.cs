@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FPSZombie.ScriptableObjects;
 namespace FPSZombie.Player
 {
     public class PlayerModel 
     {
-        // Start is called before the first frame update
-        void Start()
+        private PlayerController playerController;
+        private float Speed = 5f;
+        private int health = 100;
+        private int magzine;
+        public PlayerModel(PlayerSO playerSO)
         {
-
+            Speed = playerSO.speed;
+            health = playerSO.health;
+            magzine = playerSO.magSize;
         }
-
-        // Update is called once per frame
-        void Update()
+        public void SetController(PlayerController _playerController)
         {
-
+            playerController = _playerController;
         }
+        public float speed { get => Speed; }
+        public int Health { get => health; }
+        public int Magsize { get => magzine; }
+
     }
 
 }

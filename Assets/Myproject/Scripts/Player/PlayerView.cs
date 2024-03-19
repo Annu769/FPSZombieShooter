@@ -6,6 +6,12 @@ namespace FPSZombie.Player
 {
     public class PlayerView : MonoBehaviour
     {
+        private PlayerController playerController;
+        
+        public void SetController(PlayerController _playerController)
+        {
+            playerController = _playerController;
+        }
         // Start is called before the first frame update
         void Start()
         {

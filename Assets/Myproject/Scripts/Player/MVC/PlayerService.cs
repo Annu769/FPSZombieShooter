@@ -20,6 +20,12 @@ namespace FPSZombie.Player
             playerController = new PlayerController(playerSO);
             return playerController;
         }
+
+        public Transform GetPlayerTransform()
+        {
+            Debug.Log(playerController.GetTransform());
+            return playerController.GetTransform();
+        }
     }
 
 }

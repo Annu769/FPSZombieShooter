@@ -225,7 +225,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 78543366}
-  - component: {fileID: 78543365}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -233,18 +232,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &78543365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78543364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91829c155248ae84fa38ae153d119a1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &78543366
 Transform:
   m_ObjectHideFlags: 0
@@ -1187,6 +1174,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 915693167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!218 &619062606 stripped
+Terrain:
+  m_CorrespondingSourceObject: {fileID: 2990145745662053632, guid: 7c4908cd82284404890dde2307ce63a6, type: 3}
+  m_PrefabInstance: {fileID: 1569117891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &648087518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,8 +3357,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedb989ad7864074588e69ff5397fc39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieList: {fileID: 11400000, guid: 95cc05de124665c40ac4bb21217e79ce, type: 2}
+  parentwaypoints: {fileID: 915693167}
+  enemyList: {fileID: 11400000, guid: 95cc05de124665c40ac4bb21217e79ce, type: 2}
+  SpawnPoinsParents: {fileID: 685490757}
   enemyCanvas: {fileID: 546329292}
+  zombieCount: 25
+  terrain: {fileID: 619062606}
 --- !u!1 &1892347021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,7 +3651,6 @@ GameObject:
   - component: {fileID: 1526714116857263971}
   - component: {fileID: 6983606625045500302}
   - component: {fileID: 6817548154743730230}
-  - component: {fileID: 6983606625045500303}
   m_Layer: 0
   m_Name: MiniMapCamera
   m_TagString: Untagged
@@ -3758,18 +3753,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &6983606625045500303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4810908774381420823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92a3616bd4173334fb347e26ead410b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

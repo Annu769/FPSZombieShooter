@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9126cf35f607cb4a8b95892ac7fad52, type: 3}
+  m_Script: {fileID: 11500000, guid: 25506187aff40224b909fd25613fedfc, type: 3}
   m_Name: MonsterZonbie
   m_EditorClassIdentifier: 
   health: 300
-  speed: 200
+  speed: 25
   damage: 30
   zombieView: {fileID: 3015636121399840051, guid: 75b04119c41098349b60789b134b5c15, type: 3}

@@ -3362,9 +3362,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1888999253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653e014da5b54e540983d22e8160e41d, type: 3}
+  m_Script: {fileID: 11500000, guid: eedb989ad7864074588e69ff5397fc39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zombieList: {fileID: 11400000, guid: 95cc05de124665c40ac4bb21217e79ce, type: 2}
+  enemyCanvas: {fileID: 546329292}
 --- !u!1 &1892347021
 GameObject:
   m_ObjectHideFlags: 0

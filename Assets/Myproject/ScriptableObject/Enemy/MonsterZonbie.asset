@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9126cf35f607cb4a8b95892ac7fad52, type: 3}
+  m_Name: MonsterZonbie
+  m_EditorClassIdentifier: 
+  health: 300
+  speed: 200
+  damage: 30
+  zombieView: {fileID: 3015636121399840051, guid: 75b04119c41098349b60789b134b5c15, type: 3}

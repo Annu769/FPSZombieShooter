@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1074947139545082700}
   - component: {fileID: 8004053357746168646}
   - component: {fileID: 893395153385513612}
-  - component: {fileID: 7440875441832863037}
+  - component: {fileID: 1454951012445595963}
   m_Layer: 0
   m_Name: First_Person_Player
   m_TagString: Player
@@ -281,7 +281,7 @@ CapsuleCollider:
   m_Height: 1.6305451
   m_Direction: 1
   m_Center: {x: 0, y: -0.55321383, z: 0}
---- !u!114 &7440875441832863037
+--- !u!114 &1454951012445595963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,6 +293,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec48e1dae75e60d4b9ce5c81f7711ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheck: {fileID: 1454809719294371304}
+  groundmask:
+    serializedVersion: 2
+    m_Bits: 64
+  characterController: {fileID: 8004053357746168646}
+  animator: {fileID: 4924542356035537769}
+  mycamera: {fileID: 7636999432461725171}
+  healthBar: {fileID: 4322839025396803727}
 --- !u!1 &1287447130382298897
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4412547978966563746}
   - component: {fileID: 4924542356035537769}
+  - component: {fileID: 8694783456892731580}
   m_Layer: 0
   m_Name: FPS_Character
   m_TagString: Untagged
@@ -456,6 +465,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8694783456892731580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623905268483656713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab98b38a012e194fb597d8280b4ac20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 200
+  player: {fileID: 1074947139545082700}
 --- !u!1 &2222698514141142468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,8 +1239,8 @@ Transform:
   m_LocalScale: {x: 0.009116714, y: 0.009116714, z: 0.009116714}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4673434351607697234}
   - {fileID: 7064980766328676234}
+  - {fileID: 4673434351607697234}
   m_Father: {fileID: 1518930508730246748}
   m_LocalEulerAnglesHint: {x: -69.041, y: -124.95, z: -16.15}
 --- !u!1 &3748835594671807467

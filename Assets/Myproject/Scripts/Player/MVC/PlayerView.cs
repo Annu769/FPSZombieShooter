@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace FPSZombie.Player
 {
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : MonoBehaviour,PlayeryIDamagable
     {
         PlayerController playerController;
         private float horizontalInput;

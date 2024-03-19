@@ -418,6 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4412547978966563746}
   - component: {fileID: 4924542356035537769}
+  - component: {fileID: 4946868884409099498}
   m_Layer: 0
   m_Name: FPS_Character
   m_TagString: Untagged
@@ -464,7 +465,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-
+--- !u!114 &4946868884409099498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

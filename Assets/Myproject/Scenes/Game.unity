@@ -245,9 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91829c155248ae84fa38ae153d119a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
-  loadingScreen: {fileID: 0}
-  loadingSlider: {fileID: 0}
 --- !u!4 &78543366
 Transform:
   m_ObjectHideFlags: 0
@@ -3257,6 +3254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844709643}
+  - component: {fileID: 1844709644}
   m_Layer: 0
   m_Name: PlayerService
   m_TagString: Untagged
@@ -3273,12 +3271,25 @@ Transform:
   m_GameObject: {fileID: 1844709642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 2, z: -25}
+  m_LocalPosition: {x: 30, y: 2, z: -29.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1064228721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844709644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844709642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bda4c6ea5773e408470f53a3764c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSO: {fileID: 11400000, guid: 916864c1ee3abee43acbcf528a58bc20, type: 2}
 --- !u!1 &1855934408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3354,11 +3365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653e014da5b54e540983d22e8160e41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentwaypoints: {fileID: 915693167}
-  enemyList: {fileID: 11400000, guid: 95cc05de124665c40ac4bb21217e79ce, type: 2}
-  SpawnPoinsParents: {fileID: 685490757}
-  enemyCanvas: {fileID: 546329292}
-  zombieCount: 20
 --- !u!1 &1892347021
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FPSZombie.zombie;
+using FPSZombie.Zombie;
 namespace FPSZombie.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "EnemyScriptableObject", menuName = "ScriptableObject/NewZombie")]

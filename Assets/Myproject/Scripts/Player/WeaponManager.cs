@@ -17,11 +17,11 @@ namespace FPSZombie.player
         [SerializeField] private Animator animator;
         private float timeSinceLastShot;
         private int _ammoToReload = 30;
-        private int fullMagZine = 200;
+       
         private void Start()
         {
             gundata.currentAmmo = _ammoToReload;
-            gundata.magSize = fullMagZine;
+            
             EventListner.shootInput += Shoot;
             EventListner.reloadInpt += StartReload;
         }
@@ -47,13 +47,8 @@ namespace FPSZombie.player
             }
             gundata.reloading = false;
         }
-
-
-
-
-
-
         private bool canShoot() => !gundata.reloading && timeSinceLastShot > 1f / (gundata.fireRate / 60f);
+
         public void Shoot()
         {
             if (gundata.currentAmmo > 0)

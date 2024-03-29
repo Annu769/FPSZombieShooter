@@ -51,10 +51,13 @@ namespace FPSZombie.player
 
         public void Shoot()
         {
+            Debug.Log("Shoot");
             if (gundata.currentAmmo > 0)
             {
                 if (canShoot())
                 {
+                    Debug.Log("Shoot2");
+
                     animator.SetBool("IsShooting", true);
                     muzzleFlash.Play();
                     if (Physics.Raycast(muzzle.position, transform.forward, out RaycastHit raycastHit, gundata.maxDistance))

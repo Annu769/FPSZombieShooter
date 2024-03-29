@@ -23,7 +23,6 @@ public class SwitchWeapon : MonoBehaviour
         {
             if (slectedWeapon >= 0)
                 slectedWeapon = transform.childCount - 1;
-
             else
                 slectedWeapon--;
         }

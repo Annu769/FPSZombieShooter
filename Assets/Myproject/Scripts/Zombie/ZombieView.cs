@@ -5,7 +5,7 @@ using UnityEngine.AI;
 using FPSZombie.Player;
 namespace FPSZombie.Zombie
 {
-    public class ZombieView : MonoBehaviour
+    public class ZombieView : MonoBehaviour,EnemyIDamagable
     {
         private ZombieController zombieController;
 
@@ -13,7 +13,6 @@ namespace FPSZombie.Zombie
         [SerializeField] private Rigidbody rb;
         [SerializeField] private NavMeshAgent navMesh;
         [SerializeField] private Animator animator;
-        [SerializeField] private ParticleSystem bloodImpact;
         [SerializeField] private GameObject[] item;
         private int _dmg;
         public void SetController(ZombieController _zombieController)
@@ -25,10 +24,6 @@ namespace FPSZombie.Zombie
             zombieType = zombieController.GetZombieType();
             _dmg = zombieController.GetZombieDamage();
 
-        }
-        public ParticleSystem GetParticle()
-        {
-            return bloodImpact;
         }
         public GameObject[] Items()
         {

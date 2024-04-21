@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25506187aff40224b909fd25613fedfc, type: 3}
+  m_Script: {fileID: 11500000, guid: b9126cf35f607cb4a8b95892ac7fad52, type: 3}
   m_Name: LadyZombie
   m_EditorClassIdentifier: 
-  health: 100
-  speed: 20
-  damage: 15
+  health: 150
+  speed: 150
+  damage: 10
   zombieView: {fileID: 1117250828780793057, guid: 8a69e420d0b110a4985090d30c65a79a, type: 3}

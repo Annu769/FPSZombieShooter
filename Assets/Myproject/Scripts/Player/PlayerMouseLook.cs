@@ -5,20 +5,16 @@ using UnityEngine;
 public class PlayerMouseLook : MonoBehaviour
 {
     [SerializeField] private float sensitivity = 200f;
-
-    [SerializeField] private Transform player;
-
-
     private float mouseX;
     private float mouseY;
     private float rotation;
     private float minAngle = -90f;
     private float maxAngle = 90f;
-
+   [SerializeField] private Transform player;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = false;       
     }
     void Update()
     {
@@ -26,8 +22,11 @@ public class PlayerMouseLook : MonoBehaviour
         mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         rotation -= mouseY;
         rotation = Mathf.Clamp(rotation, minAngle, maxAngle);
-        transform.localRotation = Quaternion.Euler(rotation, 0, 0);
+        transform.localRotation = Quaternion.Euler(rotation, 0, 0);       
         player.Rotate(Vector3.up * mouseX);
     }
-
+    public void PlayFootStep()
+    {
+        SoundsManager.instance.Play(Sounds.FootStep);
+    }
 }

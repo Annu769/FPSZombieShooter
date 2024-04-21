@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8f2f84a9d6848445b3fed97b6f204d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 232c936f91d62e74f85dd267d426d907, type: 3}
   m_Name: PlayerSo
   m_EditorClassIdentifier: 
-  playerView: {fileID: 1454951012445595963, guid: d6834fe065295814d8d657cc943fffec, type: 3}
-  speed: 10
+  playerView: {fileID: 1532447456351647625, guid: d6834fe065295814d8d657cc943fffec, type: 3}
+  speed: 6
   health: 100
-  damage: 15
-  maxDistance: 200
+  damage: 10
+  maxDistance: 100
   currentAmmo: 30
   magSize: 200
   fireRate: 600
   reloadTime: 1.5
-  ammoReserve: 30
+  ammoReserve: 200
   reloading: 0

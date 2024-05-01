@@ -1,6 +1,6 @@
 
 using UnityEngine;
-using FPSZombie.Zombie;
+using FPSZombie.zombie;
 using FPSZombie.ScriptableObjects;
 namespace FPSZombie.PoolObject
 {

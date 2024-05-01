@@ -27,7 +27,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.9.5",
+      "version": "2.10.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -86,7 +86,7 @@
         "com.unity.sequences": "2.1.1",
         "com.unity.formats.fbx": "5.1.0",
         "com.unity.formats.alembic": "2.3.2",
-        "com.unity.cinemachine": "2.9.5",
+        "com.unity.cinemachine": "2.10.0",
         "com.unity.recorder": "5.0.0"
       }
     },
@@ -182,7 +182,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "16.0.5",
+      "version": "16.0.6",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -195,18 +195,18 @@
       }
     },
     "com.unity.render-pipelines.universal": {
-      "version": "16.0.5",
+      "version": "16.0.6",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.burst": "1.8.9",
-        "com.unity.render-pipelines.core": "16.0.5",
-        "com.unity.shadergraph": "16.0.5"
+        "com.unity.render-pipelines.core": "16.0.6",
+        "com.unity.shadergraph": "16.0.6"
       }
     },
     "com.unity.rendering.light-transport": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "depth": 2,
       "source": "builtin",
       "dependencies": {
@@ -242,11 +242,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "16.0.5",
+      "version": "16.0.6",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "16.0.5",
+        "com.unity.render-pipelines.core": "16.0.6",
         "com.unity.searcher": "4.9.2"
       }
     },

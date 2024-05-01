@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FPSZombie.Player;
+using FPSZombie.player;
 namespace FPSZombie.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "PlayerSo", menuName = "Player/playerGun")]

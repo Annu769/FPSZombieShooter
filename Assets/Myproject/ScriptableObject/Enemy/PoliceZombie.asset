@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25506187aff40224b909fd25613fedfc, type: 3}
   m_Name: PoliceZombie
   m_EditorClassIdentifier: 
-  health: 200
-  speed: 15
-  damage: 20
+  health: 150
+  speed: 10
+  damage: 15
   zombieView: {fileID: 5082105215681520668, guid: 4a4c6bbcab5076843b9870ff228ddab9, type: 3}

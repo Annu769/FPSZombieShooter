@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LadyZombie
   m_EditorClassIdentifier: 
   health: 100
-  speed: 20
-  damage: 15
+  speed: 15
+  damage: 20
   zombieView: {fileID: 1117250828780793057, guid: 8a69e420d0b110a4985090d30c65a79a, type: 3}

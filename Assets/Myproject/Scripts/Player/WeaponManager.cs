@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using FPSZombie.ScriptableObjects;
-using FPSZombie.Zombie;
+using FPSZombie.zombie;
 namespace FPSZombie.player
 {
     public class WeaponManager : MonoBehaviour
@@ -17,18 +17,18 @@ namespace FPSZombie.player
         [SerializeField] private Animator animator;
         private float timeSinceLastShot;
         private int _ammoToReload = 30;
-       
+        private int fullMagZine = 500;
         private void Start()
         {
             gundata.currentAmmo = _ammoToReload;
-            
+            gundata.magSize = fullMagZine;
             EventListner.shootInput += Shoot;
             EventListner.reloadInpt += StartReload;
         }
         public void StartReload()
-        {
-            if (!gundata.reloading)
-            {
+        { 
+            if (!gundata.reloading) 
+            {    
                 StartCoroutine(Reload());
             }
         }
@@ -41,28 +41,25 @@ namespace FPSZombie.player
                 gundata.magSize = gundata.magSize - _ammoToReload + gundata.currentAmmo;
                 gundata.currentAmmo = _ammoToReload;
             }
-            if (gundata.magSize < 0)
+           if(gundata.magSize < 0)
             {
                 gundata.magSize = 0;
             }
             gundata.reloading = false;
         }
         private bool canShoot() => !gundata.reloading && timeSinceLastShot > 1f / (gundata.fireRate / 60f);
-
         public void Shoot()
-        {
-            Debug.Log("Shoot");
-            if (gundata.currentAmmo > 0)
+        {          
+            if(gundata.currentAmmo > 0)
             {
-                if (canShoot())
+                if(canShoot())
                 {
-                    Debug.Log("Shoot2");
-
                     animator.SetBool("IsShooting", true);
                     muzzleFlash.Play();
-                    if (Physics.Raycast(muzzle.position, transform.forward, out RaycastHit raycastHit, gundata.maxDistance))
-                    {
-                        if (raycastHit.collider.gameObject.GetComponent<ZombieView>())
+                    SoundsManager.instance.Play(Sounds.GunSfx);
+                    if (Physics.Raycast(muzzle.position, transform.forward,out RaycastHit raycastHit,gundata.maxDistance))
+                    {                       
+                        if(raycastHit.collider.gameObject.GetComponent<ZombieView>())
                         {
                             EnemyIDamagable Idamage = raycastHit.collider.gameObject.GetComponent<EnemyIDamagable>();
                             Idamage.TakeDamage(gundata.damage);
@@ -72,12 +69,12 @@ namespace FPSZombie.player
                         {
                             GameObject particle = Instantiate(bulletImpactEffect, raycastHit.point, Quaternion.LookRotation(raycastHit.normal));
                         }
-                    }
+                    }             
                     gundata.currentAmmo--;
-                    timeSinceLastShot = 0;
+                    timeSinceLastShot = 0;                  
                 }
             }
-            else if (gundata.currentAmmo == 0)
+            else if(gundata.currentAmmo == 0)
             {
                 StartReload();
             }
@@ -87,6 +84,6 @@ namespace FPSZombie.player
             timeSinceLastShot += Time.deltaTime;
             text.SetText(gundata.currentAmmo + " / " + gundata.magSize);
         }
-
+       
     }
 }

@@ -95,5 +95,7 @@ public enum Sounds
     GunSfx,
     FootStep,
     ZombieAttack,
-    Zombie
+    Zombie,
+    PickUps
+
 }

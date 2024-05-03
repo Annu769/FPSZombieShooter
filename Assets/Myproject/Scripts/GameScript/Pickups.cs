@@ -23,9 +23,11 @@ public class Pickups : MonoBehaviour
             switch(pickupsItem)
             {
                 case PickupsItem.ammo:
+                    SoundsManager.instance.Play(Sounds.PickUps);
                     playerView.AddAmmo(ammoAmount);
                     break;
                 case PickupsItem.healthKit:
+                    SoundsManager.instance.Play(Sounds.PickUps);
                     playerView.Heal(healAmount);
                     break;
             }

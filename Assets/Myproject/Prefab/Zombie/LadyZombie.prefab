@@ -518,13 +518,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3220669068081614628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42f1c715ae3a0054dab5277bb30d5ae6, type: 3}
+  m_Script: {fileID: 11500000, guid: c6f334983cb0e194792bcbaf2d466867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6594931454782752700}
   navMesh: {fileID: 1372652266975055110}
   animator: {fileID: 8970925753115889801}
-  bloodImpact: {fileID: 198000013597187216, guid: 83e55d3418297934fab882559d009285, type: 3}
   item:
   - {fileID: 5411972403915480348, guid: 8bd28e42352557c43b8808d7adfe07fc, type: 3}
   - {fileID: 5122528269315750707, guid: e1ef3c527a7ef3448a8641987ff41858, type: 3}

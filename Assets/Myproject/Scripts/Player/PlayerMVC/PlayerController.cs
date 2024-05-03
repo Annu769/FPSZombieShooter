@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using FPSZombie.zombie;
+using FPSZombie.Zombie;
 using FPSZombie.ScriptableObjects;
 using FPSZombie.Event;
 using System;
@@ -72,11 +72,11 @@ namespace FPSZombie.player
 
         public void AddAmmo(int ammoAmount)
         {
-            if (playerSO1.magSize < 100) // Check if ammo is less than the maximum capacity
+            if (playerSO1.magSize < 500) // Check if ammo is less than the maximum capacity
             {
                 int spaceLeft = 100 - playerSO1.magSize; // Calculate remaining space in the mag
                 int addedAmmo = Mathf.Min(ammoAmount, spaceLeft); // Add only as much ammo as there is space left
-                playerSO1.magSize += addedAmmo;
+                playerSO1.magSize += ammoAmount; // Add the full ammo amount
                 Debug.Log("Ammo Added: " + addedAmmo);
                 Debug.Log("Total Ammo in Magazine: " + playerSO1.magSize);
             }
@@ -85,6 +85,7 @@ namespace FPSZombie.player
                 Debug.Log("Magazine is full");
             }
         }
+
 
         public void Heal(int healamount)
         {

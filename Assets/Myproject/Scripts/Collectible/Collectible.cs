@@ -16,6 +16,7 @@ public class Collectible : MonoBehaviour
     {
         if(other.GetComponent<PlayerView>())
         {
+            SoundsManager.instance.Play(Sounds.PickUps);
             EventListner.OnCollectible?.Invoke();
             gameObject.SetActive(false);
         }

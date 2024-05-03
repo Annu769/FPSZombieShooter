@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using FPSZombie.ScriptableObjects;
-using FPSZombie.zombie;
+using FPSZombie.Zombie;
+using System.Diagnostics;
 namespace FPSZombie.player
 {
     public class WeaponManager : MonoBehaviour
@@ -27,10 +28,14 @@ namespace FPSZombie.player
         }
         public void StartReload()
         { 
-            if (!gundata.reloading) 
-            {    
-                StartCoroutine(Reload());
+            if(this != null)
+            {
+                if (!gundata.reloading)
+                {
+                    StartCoroutine(Reload());
+                }
             }
+          
         }
         public IEnumerator Reload()
         {
@@ -54,22 +59,30 @@ namespace FPSZombie.player
             {
                 if(canShoot())
                 {
-                    animator.SetBool("IsShooting", true);
-                    muzzleFlash.Play();
+                   
+                    if (animator != null)
+                        animator.SetBool("isShooting", true);
+                    if(muzzleFlash != null)
+                        muzzleFlash.Play();
+
                     SoundsManager.instance.Play(Sounds.GunSfx);
-                    if (Physics.Raycast(muzzle.position, transform.forward,out RaycastHit raycastHit,gundata.maxDistance))
-                    {                       
-                        if(raycastHit.collider.gameObject.GetComponent<ZombieView>())
+                    if(muzzle != null)
+                    {
+                        if (Physics.Raycast(muzzle.position, transform.forward, out RaycastHit raycastHit, gundata.maxDistance))
                         {
-                            EnemyIDamagable Idamage = raycastHit.collider.gameObject.GetComponent<EnemyIDamagable>();
-                            Idamage.TakeDamage(gundata.damage);
-                            GameObject bloodparticle = Instantiate(bloodImpactEffect, raycastHit.point, Quaternion.LookRotation(raycastHit.normal));
+                            if (raycastHit.collider.gameObject.GetComponent<ZombieView>())
+                            {
+                                EnemyIDamagable Idamage = raycastHit.collider.gameObject.GetComponent<EnemyIDamagable>();
+                                Idamage.TakeDamage(gundata.damage);
+                                GameObject bloodparticle = Instantiate(bloodImpactEffect, raycastHit.point, Quaternion.LookRotation(raycastHit.normal));
+                            }
+                            else
+                            {
+                                GameObject particle = Instantiate(bulletImpactEffect, raycastHit.point, Quaternion.LookRotation(raycastHit.normal));
+                            }
                         }
-                        else
-                        {
-                            GameObject particle = Instantiate(bulletImpactEffect, raycastHit.point, Quaternion.LookRotation(raycastHit.normal));
-                        }
-                    }             
+                    }
+                   
                     gundata.currentAmmo--;
                     timeSinceLastShot = 0;                  
                 }
